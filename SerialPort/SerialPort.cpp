@@ -10,7 +10,10 @@
 
 #define PORT "/dev/ttyUSB0"
 
-SerialPort::SerialPort() : serialport(serial_io_service)
+asio::io_service SerialPort::serial_io_service;
+asio::serial_port SerialPort::serialport(serial_io_service);
+
+SerialPort::SerialPort()
 {
 	// TODO Auto-generated constructor stub
 }

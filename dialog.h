@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QPushButton>
 #include <memory>
+#include "../SerialPort/SerialPort.h"
 
 
 namespace Ui {

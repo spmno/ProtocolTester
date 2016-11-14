@@ -14,11 +14,12 @@ class SerialPort {
 public:
 	SerialPort();
 	virtual ~SerialPort();
-	bool open();
-	void run() { serial_io_service.run(); }
+    static bool open();
+    static asio::serial_port& GetSerialPort() { return serialport; }
+    static void run() { serial_io_service.run(); }
 private:
-	asio::io_service serial_io_service;
-	asio::serial_port serialport;
+    static asio::io_service serial_io_service;
+    static asio::serial_port serialport;
 };
 
 #endif /* SERIALPORT_H_ */

@@ -19,7 +19,8 @@ SOURCES +=\
     include/spdlog/fmt/bundled/ostream.cc \
     Log/MXLog.cpp \
     SerialPort/SerialPort.cpp \
-    main.cpp
+    main.cpp \
+    protocolpackage.cpp
 
 HEADERS  += dialog.h \
     include/asio/detail/impl/buffer_sequence_adapter.ipp \
@@ -489,7 +490,8 @@ HEADERS  += dialog.h \
     include/spdlog/tweakme.h \
     include/asio.hpp \
     Log/MXLog.h \
-    SerialPort/SerialPort.h
+    SerialPort/SerialPort.h \
+    protocolpackage.h
 
 FORMS    += dialog.ui
 
